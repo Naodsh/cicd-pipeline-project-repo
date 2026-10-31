@@ -4,9 +4,10 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   res.json({ 
-    message: 'Hello from DevOps Pipeline!',
-    version: process.env.APP_VERSION || '1.0.0',
-    environment: process.env.NODE_ENV || 'development'
+    message: 'Hello from DevOps Pipeline v2!',
+    version: process.env.APP_VERSION || '2.0.0',
+    environment: process.env.NODE_ENV || 'development',
+    updated: 'Now with CI/CD automation!'
   });
 });
 
@@ -15,7 +16,7 @@ app.get('/health', (req, res) => {
 });
 
 const server = app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server v2 running on port ${PORT}`);
 });
 
 module.exports = server;
