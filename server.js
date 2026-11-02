@@ -16,7 +16,7 @@ app.get('/health', (req, res) => {
 });
 
 const server = app.listen(PORT, () => {
-  console.log(`Server v2 running on port ${PORT}`);
+  console.log(`Server v3 running on port ${PORT}`);
 });
 
 module.exports = server;
